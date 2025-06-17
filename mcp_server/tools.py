@@ -34,4 +34,4 @@ __all__ = ["mcp", "ask"]
 if __name__ == "__main__":
     print("Starting Employee Database Tool Server...")
     # --- CRITICAL CHANGE HERE: Remove transport="stdio" ---
-    mcp.run(transport="streamable-http", host="127.0.0.1", port=9000) # This will default to HTTP transport (usually 127.0.0.1:8000)
+    mcp.run(transport="streamable-http", host="127.0.0.1", port=8002) # This will default to HTTP transport (usually 127.0.0.1:8000)

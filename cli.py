@@ -45,7 +45,7 @@ async def main():
     console.print("[bold green]💬 ChatSQL (Gemini + FastMCP)[/bold green] (Type 'exit' to quit)\n")
 
     # IMPORTANT: This is the standard HTTP address for FastMCP server
-    mcp_server_address = "http://127.0.0.1:9000/mcp"
+    mcp_server_address = "http://127.0.0.1:8002/mcp"
 
     try:
         # --------------------------------------------------------------------
