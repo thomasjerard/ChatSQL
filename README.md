@@ -28,12 +28,17 @@ You ask a question in plain English, and ChatSQL generates and executes the SQL,
 
 > **Output:**  
 
-+----+---------+--------+------------+-----------+------------+
-| id | name | salary | phone_no | address | department |
-+----+---------+--------+------------+-----------+------------+
-| 1 | Alice | 75000 | 9876543210 | New York | HR |
-| 2 | Bob | 65000 | 1234567890 | Chicago | Finance |
-+----+---------+--------+------------+-----------+------------+
+> +----+---------+--------+------------+-----------+------------+
+
+> | id | name | salary | phone_no | address | department |
+
+> +----+---------+--------+------------+-----------+------------+
+
+> | 1 | Alice | 75000 | 9876543210 | New York | HR |
+
+> | 2 | Bob | 65000 | 1234567890 | Chicago | Finance |
+
+> +----+---------+--------+------------+-----------+------------+
 
 
 ---
@@ -45,56 +50,71 @@ You ask a question in plain English, and ChatSQL generates and executes the SQL,
 ```bash
 > git clone https://github.com/yourname/chatSQL.git
 > cd chatSQL
+```
 
 ### ✅ 2. Prerequisites
 
 * Bash shell is required (default on macOS/Linux).
-* Python 3.11+ must be installed and accessible via your terminal.
+* Python 3.11+ must be installed and accessible via your terminal. 
+If not installed, 
+
+For macOS:
+```bash
+brew install python@3.11
+```
+For Linux:
+```bash
+sudo apt install python3.11 python3.11-venv
+```
+
 
 ### ✅ 3. Create a .env file in the root folder with the following content:
 
-env
-Copy
-Edit
+```bash
 DB_NAME=chattosql
 DB_USER=postgres
 DB_PASS=yourpassword
 DB_HOST=localhost
 DB_PORT=5432
 GEMINI_API_KEY=your-gemini-api-key
+```
 
 ### ✅ 3. Run the Application
 You’ll need two separate terminals:
 
 🖥️ Terminal 1 — Start the Server
+```bash
 ./run_server.sh
+```
 
 💬Terminal 2 — Start the Client
+```bash
 ./run_client.sh
+```
 Once the client starts, you'll see a prompt like:
 
 💬 ChatSQL (Gemini + FastMCP)
 🗨️ Ask (NL):
 
-🔧 What Happens Internally
+### 🔧 What Happens Internally
 
-Each script (run_server.sh / run_client.sh) performs the following:
+1. Each script (run_server.sh / run_client.sh) performs the following:
 
-Deletes any existing virtual environment and creates a fresh one.
+2. Deletes any existing virtual environment and creates a fresh one.
 
-Loads environment variables from the .env file.
+3. Loads environment variables from the .env file.
 
-Installs required Python dependencies from requirements.txt.
+4. Installs required Python dependencies from requirements.txt.
 
-Sets up PostgreSQL:
+5. Sets up PostgreSQL:
 
-Creates the database (chattosql)
+6. Creates the database (chattosql)
 
-Adds the user (postgres)
+7. Adds the user (postgres)
 
-Creates a sample employees table
+8. Creates a sample employees table
 
-Starts the FastMCP server or the ChatSQL CLI client, depending on the script.
+9. Starts the FastMCP server or the ChatSQL CLI client, depending on the script.
 
 
 
