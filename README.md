@@ -48,7 +48,7 @@ You ask a question in plain English, and ChatSQL generates and executes the SQL,
 ### ✅ 1. Clone the Repository & Configure Environment
 
 ```bash
-> git clone https://github.com/yourname/chatSQL.git
+> git clone https://github.com/thomasjerard/ChatSQL.git
 > cd chatSQL
 ```
 
